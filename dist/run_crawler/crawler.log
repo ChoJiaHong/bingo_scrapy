@@ -1,0 +1,34 @@
+2025-06-09 07:10:18,084 - ERROR - An error occurred while running the crawler.
+Traceback (most recent call last):
+  File "run_crawler.py", line 17, in main
+    process = CrawlerProcess(get_project_settings())
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "scrapy\utils\project.py", line 73, in get_project_settings
+  File "scrapy\settings\__init__.py", line 369, in setmodule
+  File "importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\codeForLang\tmp\TWBingo_v2\bingo_scrapy\bingo_scrapy\settings.py", line 10, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+2025-06-09 07:10:22,052 - ERROR - An error occurred while running the crawler.
+Traceback (most recent call last):
+  File "run_crawler.py", line 17, in main
+    process = CrawlerProcess(get_project_settings())
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "scrapy\utils\project.py", line 73, in get_project_settings
+  File "scrapy\settings\__init__.py", line 369, in setmodule
+  File "importlib\__init__.py", line 126, in import_module
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "D:\codeForLang\tmp\TWBingo_v2\bingo_scrapy\bingo_scrapy\settings.py", line 10, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
