@@ -1,0 +1,5 @@
+scrapy
+python-dotenv
+pymssql
+pymongo
+requests

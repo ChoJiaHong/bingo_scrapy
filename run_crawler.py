@@ -4,16 +4,22 @@ import sys
 import logging
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-# 設定日誌
-logging.basicConfig(
-    filename="crawler.log",  # 日誌檔案名稱
-    level=logging.ERROR,     # 記錄錯誤級別以上的訊息
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
 
 def main():
     try:
-        os.chdir(r"d:\codeForLang\tmp\TWBingo_v2\bingo_scrapy")
+        # 將工作目錄設為腳本或執行檔所在位置
+        base_dir = os.path.dirname(
+            os.path.abspath(sys.executable if getattr(sys, "frozen", False) else __file__)
+        )
+        os.chdir(base_dir)
+
+        # 在設定目錄後才初始化日誌檔案，避免因排程器目錄不同導致找不到檔案
+        logging.basicConfig(
+            filename=os.path.join(base_dir, "crawler.log"),
+            level=logging.ERROR,
+            format="%(asctime)s - %(levelname)s - %(message)s",
+        )
+
         process = CrawlerProcess(get_project_settings())
         process.crawl("bingo_spider")  # 這裡對應你的 spider 名稱
         process.start()
